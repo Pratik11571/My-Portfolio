@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-export const MatrixBackground = () => {
+export const OrbBackground = () => {
   const canvasRef = useRef(null);
   const mouse = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
 
