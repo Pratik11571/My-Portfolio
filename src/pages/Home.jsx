@@ -1,16 +1,14 @@
 import { Navbar } from "../components/Navbar";
-import { ThemeToggle } from "../components/ThemeToggle";
-import { StarBackground } from "@/components/StarBackground";
 import { HeroSection } from "../components/HeroSection";
 import { AboutSection } from "../components/AboutSection";
 import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
-
 import { motion } from "framer-motion";
-// utils/motion.js
+import { OrbBackground } from "../components/OrbBackground";
 
+// Assuming fadeInUp is defined in another file or here
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -18,29 +16,28 @@ const fadeInUp = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.42, 0, 0.58, 1], // easeInOut
+      ease: [0.42, 0, 0.58, 1],
     },
   },
 };
 
-
 export const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    // FIX: Removed the `bg-background` class from this line
+    <div className="min-h-screen text-foreground overflow-x-hidden">
       
-
       {/* Background Effects */}
-      <StarBackground />
+      <OrbBackground />
 
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <main className="space-y-20">
-        {/* Hero Section (Static or use animation if needed) */}
+      {/* This part is correct, with zIndex: 1 to ensure it's on top of the background */}
+      <main className="space-y-20" style={{ position: 'relative', zIndex: 1, color: 'white' }}>
+        
         <HeroSection />
 
-        {/* About */}
         <motion.section
           variants={fadeInUp}
           initial="hidden"
@@ -50,7 +47,6 @@ export const Home = () => {
           <AboutSection />
         </motion.section>
 
-        {/* Skills */}
         <motion.section
           variants={fadeInUp}
           initial="hidden"
@@ -60,7 +56,6 @@ export const Home = () => {
           <SkillsSection />
         </motion.section>
 
-        {/* Projects */}
         <motion.section
           variants={fadeInUp}
           initial="hidden"
@@ -69,8 +64,7 @@ export const Home = () => {
         >
           <ProjectsSection />
         </motion.section>
-
-        {/* Contact */}
+        
         <motion.section
           variants={fadeInUp}
           initial="hidden"
