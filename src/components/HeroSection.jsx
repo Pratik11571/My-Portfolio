@@ -21,7 +21,7 @@ icon: <Github className="w-5 h-5" />,
 },
 {
 name: "Resume",
-link: "https://drive.google.com/file/d/1b4iTW_6dK5mNBIWXbeeCNznIojUpqzix/view?usp=sharing",
+link: "https://drive.google.com/file/d/1BoCY_0wjIknJQX5ku8YusKONOxz8bky5/view?usp=sharing",
 icon: <FileText className="w-5 h-5" />,
 },
 ];
