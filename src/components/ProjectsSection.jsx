@@ -21,6 +21,16 @@ const projects = [
     demoUrl: "https://event-management-uqwk.onrender.com/",
     githubUrl: "https://github.com/Pratik11571/Event-Management",
   },
+  {
+    id: 3,
+    title: "Finance Tracker",
+    description:
+      "Built a finance management platform to add expenses, manage multiple accounts with budgets, categorize transactions, upload AI-powered bill receipts, set recurring payments, and visualize income/expenses with charts.",
+    image: "/projects/Project3.png",
+    tags: ["Nextjs", "Shadcn UI", "Clerk"],
+    demoUrl: "https://finance-tracker-eight-topaz.vercel.app/",
+    githubUrl: "https://github.com/Pratik11571/Finance-Tracker",
+  },
 ];
 
 export const ProjectsSection = () => {
